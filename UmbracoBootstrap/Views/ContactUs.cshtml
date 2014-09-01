@@ -1,0 +1,23 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "umbLayout.cshtml";
+    var contact = new UmbracoBootstrap.Models.Contact();
+}
+
+<div>
+    <div class="span3">
+        <div class="well sidebar-nav">
+            @Umbraco.Field("contactUsContactInformation")
+        </div>
+        <!--/.well -->
+    </div>
+    <!--/span-->
+    <div class="span9">
+        <div id="target">
+            <h1>Write to Us</h1>
+            @Html.Partial("ContactForm", contact)
+        </div>
+    </div>
+    <!--/span-->
+
+</div>
